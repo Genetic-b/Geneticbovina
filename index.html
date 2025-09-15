@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Genética Bovina</title>
+    <link rel="shortcut icon" href="logo GB.jpg" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#FF8C00",
+              secondary: "#000000",
+            },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      :where([class^="ri-"])::before {
+      content: "\f3c2";
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <div class="flex items-center">
+           <header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+    <!-- Logo -->
+    <div class="flex items-center">
+      
+  <img src="https://i.ibb.co/FLKMjk8K/logo-gbsinfondo.png" alt="Logo" class="w-16 sm:w-24 md:w-32 h-auto" />
+</div>
+
+
+    <!-- Menú de escritorio -->
+    <nav class="hidden md:flex space-x-8">
+      <a href="#inicio" class="text-gray-700 hover:text-orange-600 transition font-medium">Inicio</a>
+      <a href="#razas" class="text-gray-700 hover:text-orange-600 transition font-medium">Razas</a>
+      <a href="#servicios" class="text-gray-700 hover:text-orange-600 transition font-medium">Servicios</a>
+      <a href="#contacto" class="text-gray-700 hover:text-orange-600 transition font-medium">Contacto</a>
+    </nav>
+
+    <!-- Botón de menú móvil -->
+    <div class="md:hidden">
+      <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Menú desplegable en móvil -->
+  <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 bg-white space-y-2">
+    <a href="#inicio" class="block text-gray-700 hover:text-orange-600 font-medium">Inicio</a>
+    <a href="#razas" class="block text-gray-700 hover:text-orange-600 font-medium">Razas</a>
+    <a href="#servicios" class="block text-gray-700 hover:text-orange-600 font-medium">Servicios</a>
+    <a href="#contacto" class="block text-gray-700 hover:text-orange-600 font-medium">Contacto</a>
+  </div>
+</header>
+
+          <div class="flex items-center space-x-4">
+            <a
+              href="https://wa.me/573116174630"
+              target="_blank"
+              class="bg-primary text-white px-6 py-3 !rounded-button hover:bg-orange-600 transition-colors duration-200 flex items-center space-x-2 whitespace-nowrap"
+            >
+              <div class="w-5 h-5 flex items-center justify-center">
+                <i class="ri-whatsapp-fill text-lg"></i>
+              </div>
+              <span class="font-medium">WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Hero Section -->
+    <section
+      id="inicio"
+      class="relative bg-white overflow-hidden"
+      style="background-image: url('https://img.freepik.com/fotos-premium/vacas-no-fundo-do-por-do-sol-ilustracao-de-alta-qualidade_21085-1356.jpg'); 
+      background-size: cover; background-position: center; background-repeat: no-repeat;"
+    >
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-transparent"
+      ></div>
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div class="w-full grid lg:grid-cols-2 gap-12 items-center">
+          <div class="space-y-8">
+            <h1
+              class="text-5xl lg:text-6xl font-bold text-secondary leading-tight"
+            >
+              Genética Bovina
+              
+              <span class="text-primary"></span>
+            </h1>
+            <p class="text-xl text-gray-600 leading-relaxed max-w-2xl">
+              Especialistas en semen bovino de las mejores razas lecheras:
+              Girolando, Gyr Lechero, Guzerá Lechero y Sindi Lechero. Mejoramos
+              la genética de tu ganado con calidad garantizada.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a
+                href="https://wa.me/573116174630"
+                target="_blank"
+                class="bg-primary text-white px-8 py-4 !rounded-button hover:bg-orange-600 transition-colors duration-200 flex items-center justify-center space-x-3 whitespace-nowrap"
+              >
+                <div class="w-6 h-6 flex items-center justify-center">
+                  <i class="ri-whatsapp-fill text-xl"></i>
+                </div>
+                <span class="font-semibold">Consultar Disponibilidad</span>
+              </a>
+              <a
+                href="#razas"
+                class="border-2 border-secondary text-secondary px-8 py-4 !rounded-button hover:bg-secondary hover:text-white transition-colors duration-200 flex items-center justify-center space-x-3 whitespace-nowrap"
+              >
+                <div class="w-6 h-6 flex items-center justify-center">
+                  <i class="ri-eye-line text-xl"></i>
+                </div>
+                <span class="font-semibold">Ver Razas</span>
+              </a>
+            </div>
+          </div>
+          <div class="hidden lg:block"></div>
+        </div>
+      </div>
+    </section>
+    <!-- Razas Section -->
+     
+    <section id="razas" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-secondary mb-4">
+            Nuestras Razas Especializadas
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Ofrecemos semen bovino de las mejores razas lecheras, seleccionadas
+            por su alta productividad y adaptabilidad al clima tropical.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Girolando -->
+          <div
+            class="bg-gray-50 rounded-2xl p-8 hover:shadow-xl transition-shadow duration-300"
+          >
+          
+            <div class="mb-6">
+              <img
+                src="https://static.readdy.ai/image/d3e0e2222e7b707bfeba80193b0e7dd6/85b5510e006403ed70f9fd35b09948ca.jfif"
+                alt="Raza Girolando"
+                class="w-full h-48 object-cover object-top rounded-xl"
+              />
+            </div>
+            <h3 class="text-2xl font-bold text-secondary mb-4">Girolando</h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              Cruce perfecto entre Holstein y Gyr, combina alta producción
+              lechera con resistencia al clima tropical. Excelente adaptabilidad
+              y longevidad productiva.
+            </p>
+            <div class="space-y-3 mb-6">
+              <div class="flex items-center space-x-3">
+                <div class="w-5 h-5 flex items-center justify-center">
+                  <i class="ri-check-line text-primary text-lg"></i>
+                </div>
+                <span class="text-sm text-gray-700"
+                  >Alta producción lechera</span
+                >
+              </div>
+              <div class="flex items-center space-x-3">
+                <div class="w-5 h-5 flex items-center justify-center">
+                  <i class="ri-check-line text-primary text-lg"></i>
+                </div>
+                <span class="text-sm text-gray-700">Resistencia al calor</span>
+              </div>
+              <div class="flex items-center space-x-3">
+                <div class="w-5 h-5 flex items-center justify-center">
+                  <i class="ri-check-line text-primary text-lg"></i>
+                </div>
+                <span class="text-sm text-gray-700">Fácil manejo</span>
+              </div>
+            </div>
+            <a
+              href="https://wa.me/573116174630?text=Hola, me interesa información sobre semen de la raza Girolando"
+              target="_blank"
+              class="w-full bg-primary text-white py-3 !rounded-button hover:bg-orange-600 transition-colors duration-200 flex items-center justify-center space-x-2 whitespace-nowrap"
+            >
+              <div class="w-5 h-5 flex items-center justify-center">
+                <i class="ri-message-3-line text-lg"></i>
+              </div>
+              <span class="font-medium">Cotizar</span>
+            </a>
+          </div>
+          <!-- Gyr Lechero -->
+          <div
+            class="bg-gray-50 rounded-2xl p-8 hover:shadow-xl transition-shadow duration-300"
+          >
+            <div class="mb-6">
+              <img
+                src="https://static.readdy.ai/image/d3e0e2222e7b707bfeba80193b0e7dd6/f905533e4fc2dc2f455837cdd6dc320e.jfif"
+                alt="Raza Gyr Lechero"
+                class="w-full h-48 object-cover object-top rounded-xl"
+              />
+            </div>
+            <h3 class="text-2xl font-bold text-secondary mb-4">Gyr Lechero</h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              Raza cebúina especializada en producción lechera, perfectamente
+              adaptada al trópico. Reconocida por su rusticidad y excelente
+              calidad de leche.
+            </p>
+            <div class="space-y-3 mb-6">
+              <div class="flex items-center space-x-3">
+                <div class="w-5 h-5 flex items-center justify-center">
+                  <i class="ri-check-line text-primary text-lg"></i>
+                </div>
+                <span class="text-sm text-gray-700">Adaptación tropical</span>
+              </div>
+              <div class="flex items-center space-x-3">
+                <div class="w-5 h-5 flex items-center justify-center">
+                  <i class="ri-check-line text-primary text-lg"></i>
+                </div>
+                <span class="text-sm text-gray-700"
+                  >Resistencia a enfermedades</span
+                >
+              </div>
+              <div class="flex items-center space-x-3">
+                <div class="w-5 h-5 flex items-center justify-center">
+                  <i class="ri-check-line text-primary text-lg"></i>
+                </div>
+                <span class="text-sm text-gray-700">Longevidad productiva</span>
+              </div>
+            </div>
+            <a
+              href="https://wa.me/573116174630?text=Hola, me interesa información sobre semen de la raza Gyr Lechero"
+              target="_blank"
+              class="w-full bg-primary text-white py-3 !rounded-button hover:bg-orange-600 transition-colors duration-200 flex items-center justify-center space-x-2 whitespace-nowrap"
+            >
+              <div class="w-5 h-5 flex items-center justify-center">
+                <i class="ri-message-3-line text-lg"></i>
+              </div>
+              <span class="font-medium">Cotizar</span>
+            </a>
+          </div>
+          <!-- Guzerá Lechero -->
+          <div
+            class="bg-gray-50 rounded-2xl p-8 hover:shadow-xl transition-shadow duration-300"
+          >
+            <div class="mb-6">
+              <img
+                src="https://static.readdy.ai/image/d3e0e2222e7b707bfeba80193b0e7dd6/226c58510848a00a4c15148ef1542ea1.jfif"
+                alt="Raza Guzerá Lechero"
+                class="w-full h-48 object-cover object-top rounded-xl"
+              />
+            </div>
+            <h3 class="text-2xl font-bold text-secondary mb-4">
+              Guzerá Lechero
+            </h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              Raza cebúina de doble propósito con excelente potencial lechero.
+              Destaca por su docilidad, facilidad de ordeño y adaptación a
+              diversos sistemas productivos.
+            </p>
+            <div class="space-y-3 mb-6">
+              <div class="flex items-center space-x-3">
+                <div class="w-5 h-5 flex items-center justify-center">
+                  <i class="ri-check-line text-primary text-lg"></i>
+                </div>
+                <span class="text-sm text-gray-700">Doble propósito</span>
+              </div>
+              <div class="flex items-center space-x-3">
+                <div class="w-5 h-5 flex items-center justify-center">
+                  <i class="ri-check-line text-primary text-lg"></i>
+                </div>
+                <span class="text-sm text-gray-700">Excelente docilidad</span>
+              </div>
+              <div class="flex items-center space-x-3">
+                <div class="w-5 h-5 flex items-center justify-center">
+                  <i class="ri-check-line text-primary text-lg"></i>
+                </div>
+                <span class="text-sm text-gray-700">Facilidad de ordeño</span>
+              </div>
+            </div>
+            <a
+              href="https://wa.me/573116174630?text=Hola, me interesa información sobre semen de la raza Guzerá Lechero"
+              target="_blank"
+              class="w-full bg-primary text-white py-3 !rounded-button hover:bg-orange-600 transition-colors duration-200 flex items-center justify-center space-x-2 whitespace-nowrap"
+            >
+              <div class="w-5 h-5 flex items-center justify-center">
+                <i class="ri-message-3-line text-lg"></i>
+              </div>
+              <span class="font-medium">Cotizar</span>
+            </a>
+          </div>
+          <!-- Sindi Lechero -->
+          <div
+            class="bg-gray-50 rounded-2xl p-8 hover:shadow-xl transition-shadow duration-300"
+          >
+            <div class="mb-6">
+              <img
+                src="https://static.readdy.ai/image/d3e0e2222e7b707bfeba80193b0e7dd6/da229980475d4c7cbd11b8fdc3789c90.jfif"
+                alt="Raza Sindi Lechero"
+                class="w-full h-48 object-cover object-top rounded-xl"
+              />
+            </div>
+            <h3 class="text-2xl font-bold text-secondary mb-4">
+              Sindi Lechero
+            </h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              Raza cebúina originaria de Pakistán, reconocida por su alta
+              producción lechera en condiciones tropicales. Excelente calidad de
+              leche con alto contenido graso.
+            </p>
+            <div class="space-y-3 mb-6">
+              <div class="flex items-center space-x-3">
+                <div class="w-5 h-5 flex items-center justify-center">
+                  <i class="ri-check-line text-primary text-lg"></i>
+                </div>
+                <span class="text-sm text-gray-700">Alta producción</span>
+              </div>
+              <div class="flex items-center space-x-3">
+                <div class="w-5 h-5 flex items-center justify-center">
+                  <i class="ri-check-line text-primary text-lg"></i>
+                </div>
+                <span class="text-sm text-gray-700">Leche de calidad</span>
+              </div>
+              <div class="flex items-center space-x-3">
+                <div class="w-5 h-5 flex items-center justify-center">
+                  <i class="ri-check-line text-primary text-lg"></i>
+                </div>
+                <span class="text-sm text-gray-700">Resistencia climática</span>
+              </div>
+            </div>
+            
+            <a
+              href="https://wa.me/573116174630?text=Hola, me interesa información sobre semen de la raza Sindi Lechero"
+              target="_blank"
+              class="w-full bg-primary text-white py-3 !rounded-button hover:bg-orange-600 transition-colors duration-200 flex items-center justify-center space-x-2 whitespace-nowrap"
+            >
+              <div class="w-5 h-5 flex items-center justify-center">
+                <i class="ri-message-3-line text-lg"></i>
+              </div>
+              <span class="font-medium">Cotizar</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-white/80 backdrop-blur-sm mt-8 rounded-2xl"
+      >
+        <div class="text-center mb-8">
+          <h2 class="text-3xl font-bold text-secondary mb-4">
+            Catálogo Digital de Razas
+          </h2>
+          <p class="text-gray-700 mb-8">
+            Explora nuestro catálogo completo con información detallada sobre
+            nuestras razas y servicios de genética bovina premium.
+          </p>
+        </div>
+        
+        <!-- Botones de acción del catálogo -->
+        <div class="grid md:grid-cols-3 gap-6 mb-8">
+          <a
+            href="https://online.fliphtml5.com/aydtv/urmw/"
+            target="_blank"
+            class="bg-primary text-white px-6 py-4 !rounded-button hover:bg-orange-600 transition-all duration-200 flex items-center justify-center space-x-3 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+          >
+            <div class="w-6 h-6 flex items-center justify-center">
+              <i class="ri-book-open-line text-xl"></i>
+            </div>
+            <span class="font-semibold">Ver Catálogo Interactivo</span>
+          </a>
+          
+          <a
+            href="https://online.fliphtml5.com/aydtv/urmw/"
+            target="_blank"
+            class="bg-secondary text-white px-6 py-4 !rounded-button hover:bg-gray-800 transition-all duration-200 flex items-center justify-center space-x-3 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+          >
+            <div class="w-6 h-6 flex items-center justify-center">
+              <i class="ri-eye-line text-xl"></i>
+            </div>
+            <span class="font-semibold">Explorar Online</span>
+          </a>
+          
+          <a
+            href="https://wa.me/573116174630?text=Hola, me interesa recibir información del catálogo interactivo de genética bovina"
+            target="_blank"
+            class="bg-green-600 text-white px-6 py-4 !rounded-button hover:bg-green-700 transition-all duration-200 flex items-center justify-center space-x-3 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+          >
+            <div class="w-6 h-6 flex items-center justify-center">
+              <i class="ri-whatsapp-fill text-xl"></i>
+            </div>
+            <span class="font-semibold">Consultar por WhatsApp</span>
+          </a>
+        </div>
+
+        <!-- Visor de catálogo embebido -->
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+          <div class="p-4 bg-gradient-to-r from-primary to-orange-600">
+            <h3 class="text-xl font-bold text-white">Catálogo Interactivo - Genética Bovina Premium</h3>
+            <p class="text-orange-100 text-sm">Navega por nuestro catálogo digital con efecto de páginas</p>
+          </div>
+          <div class="p-4">
+            <div class="bg-gray-100 rounded-lg overflow-hidden" style="height: 700px;">
+              <iframe
+                src="https://online.fliphtml5.com/aydtv/urmw/"
+                width="100%"
+                height="100%"
+                style="border: none;"
+                title="Catálogo Interactivo Genética Bovina"
+                allowfullscreen>
+              </iframe>
+            </div>
+            <div class="mt-6 text-center">
+              <p class="text-sm text-gray-600 mb-4">
+                Catálogo interactivo con navegación por páginas y zoom. 
+                <a href="https://online.fliphtml5.com/aydtv/urmw/" target="_blank" class="text-primary hover:text-orange-600 font-medium">Abrir en pantalla completa</a>
+              </p>
+              <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="https://wa.me/573116174630?text=Hola, me interesa información sobre las razas del catálogo interactivo"
+                  target="_blank"
+                  class="inline-flex items-center space-x-2 bg-primary text-white px-6 py-3 !rounded-button hover:bg-orange-600 transition-colors duration-200"
+                >
+                  <div class="w-5 h-5 flex items-center justify-center">
+                    <i class="ri-message-3-line"></i>
+                  </div>
+                  <span class="font-medium">Consultar disponibilidad</span>
+                </a>
+                <a
+                  href="https://online.fliphtml5.com/aydtv/urmw/"
+                  target="_blank"
+                  class="inline-flex items-center space-x-2 bg-secondary text-white px-6 py-3 !rounded-button hover:bg-gray-800 transition-colors duration-200"
+                >
+                  <div class="w-5 h-5 flex items-center justify-center">
+                    <i class="ri-external-link-line"></i>
+                  </div>
+                  <span class="font-medium">Ver en nueva ventana</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+    <!-- Servicios Section -->
+    <section id="servicios" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-secondary mb-4">
+            Nuestros Servicios
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Ofrecemos un servicio integral para el mejoramiento genético de su
+            ganado bovino con la más alta calidad y garantía.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-5 gap-8">
+          <div
+            class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
+          >
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6"
+            >
+              <div class="w-8 h-8 flex items-center justify-center">
+                <i class="ri-flask-line text-primary text-2xl"></i>
+              </div>
+            </div>
+            <h3 class="text-2xl font-bold text-secondary mb-4">
+              Semen de Calidad Premium
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Semen bovino de las mejores líneas genéticas, procesado con
+              tecnología de punta y almacenado en condiciones óptimas para
+              garantizar máxima fertilidad.
+            </p>
+          </div>
+          <div
+            class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
+          >
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6"
+            >
+              <div class="w-8 h-8 flex items-center justify-center">
+                <i class="ri-user-heart-line text-primary text-2xl"></i>
+              </div>
+            </div>
+            <h3 class="text-2xl font-bold text-secondary mb-4">
+              Asesoría Especializada
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Nuestro equipo de expertos en genética bovina le brinda asesoría
+              personalizada para seleccionar las mejores opciones según sus
+              objetivos productivos.
+            </p>
+          </div>
+          <div
+            class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
+          >
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6"
+            >
+              <div class="w-8 h-8 flex items-center justify-center">
+                <i class="ri-drop-line text-primary text-2xl"></i>
+              </div>
+            </div>
+            <h3 class="text-2xl font-bold text-secondary mb-4">
+              Nitrógeno Líquido
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Suministro constante de nitrógeno líquido de alta pureza para la
+              conservación óptima del material genético, garantizando su
+              viabilidad a largo plazo.
+            </p>
+          </div>
+          <div
+            class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
+          >
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6"
+            >
+              <div class="w-8 h-8 flex items-center justify-center">
+                <i class="ri-tools-line text-primary text-2xl"></i>
+              </div>
+            </div>
+            <h3 class="text-2xl font-bold text-secondary mb-4">
+              Mantenimiento de Termos
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Servicio especializado de mantenimiento y reparación de termos
+              criogénicos, asegurando el correcto almacenamiento y preservación
+              del material genético.
+            </p>
+          </div>
+          <div
+            class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
+          >
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6"
+            >
+              <div class="w-8 h-8 flex items-center justify-center">
+                <i class="ri-file-pdf-line text-primary text-2xl"></i>
+              </div>
+            </div>
+            <h3 class="text-2xl font-bold text-secondary mb-4">
+              Catálogo Digital
+            </h3>
+            <p class="text-gray-600 leading-relaxed mb-6">
+              Descarga nuestro catálogo completo con información detallada sobre
+              nuestras razas y servicios de genética bovina premium.
+            </p>
+            <a
+              href="https://online.fliphtml5.com/aydtv/urmw/"
+              target="_blank"
+              class="w-full bg-primary/10 text-primary py-3 !rounded-button hover:bg-primary hover:text-white transition-colors duration-200 flex items-center justify-center space-x-2 whitespace-nowrap"
+            >
+              <div class="w-5 h-5 flex items-center justify-center">
+                <i class="ri-book-open-line"></i>
+              </div>
+              <span class="font-medium">Ver Catálogo</span>
+            </a>
+          </div>
+          <div
+            class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
+          >
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6"
+            >
+              <div class="w-8 h-8 flex items-center justify-center">
+                <i class="ri-truck-line text-primary text-2xl"></i>
+              </div>
+            </div>
+            <h3 class="text-2xl font-bold text-secondary mb-4">
+              Entrega Garantizada
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Contamos con cadena de frío especializada y entrega oportuna en
+              toda la región de Córdoba y zonas aledañas, manteniendo la calidad
+              del producto.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contacto" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-secondary mb-4">Contáctanos</h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Estamos listos para asesorarte en el mejoramiento genético de tu
+            ganado. Contáctanos para más información sobre nuestros productos y
+            servicios.
+          </p>
+        </div>
+        <!-- Información de Contacto Principal -->
+        <div class="grid lg:grid-cols-3 gap-8 mb-16">
+          <div class="bg-gradient-to-br from-primary/10 to-primary/20 rounded-2xl p-8 hover:shadow-lg transition-all duration-300">
+            <div class="w-16 h-16 bg-primary/20 rounded-2xl flex items-center justify-center mb-6">
+              <div class="w-8 h-8 flex items-center justify-center">
+                <i class="ri-whatsapp-fill text-primary text-2xl"></i>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-secondary mb-4">WhatsApp Directo</h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              Contáctanos directamente por WhatsApp para consultas inmediatas y cotizaciones personalizadas.
+            </p>
+            <a
+              href="https://wa.me/573116174630"
+              target="_blank"
+              class="inline-flex items-center space-x-2 text-primary hover:text-orange-600 transition-colors duration-200 font-semibold"
+            >
+              <span>+57 311 617 4630</span>
+              <div class="w-4 h-4 flex items-center justify-center">
+                <i class="ri-external-link-line text-sm"></i>
+              </div>
+            </a>
+          </div>
+          
+          <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-8 hover:shadow-lg transition-all duration-300">
+            <div class="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center mb-6">
+              <div class="w-8 h-8 flex items-center justify-center">
+                <i class="ri-mail-line text-secondary text-2xl"></i>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-secondary mb-4">Correo Electrónico</h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              Envíanos tu consulta por email para recibir información detallada sobre nuestros servicios.
+            </p>
+            <a
+              href="mailto:jgmv2004@gmail.com"
+              class="inline-flex items-center space-x-2 text-secondary hover:text-gray-700 transition-colors duration-200 font-semibold"
+            >
+              <span>jgmv2004@gmail.com</span>
+              <div class="w-4 h-4 flex items-center justify-center">
+                <i class="ri-external-link-line text-sm"></i>
+              </div>
+            </a>
+          </div>
+          
+          <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 hover:shadow-lg transition-all duration-300">
+            <div class="w-16 h-16 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-6">
+              <div class="w-8 h-8 flex items-center justify-center">
+                <i class="ri-map-pin-line text-blue-600 text-2xl"></i>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-secondary mb-4">Ubicación</h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              Visítanos en nuestra sede principal en Montería, Córdoba para atención personalizada.
+            </p>
+            <div class="text-secondary font-semibold">
+              <p>Calle 22D N°.18A-65</p>
+              <p>Montería, Córdoba</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mapa y Botones de Acción -->
+        <div class="grid lg:grid-cols-2 gap-12 items-start">
+          <div class="space-y-8">
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+              <div class="p-6 bg-gradient-to-r from-primary to-orange-600">
+                <h3 class="text-2xl font-bold text-white mb-2">Nuestra Ubicación</h3>
+                <p class="text-orange-100">Encuéntranos fácilmente en el corazón de Montería</p>
+              </div>
+              <div class="p-0">
+                <iframe 
+                  src="https://www.google.com/maps?q=Calle+22D+N°.18A-65,+Montería,+Córdoba&output=embed" 
+                  width="100%" 
+                  height="300" 
+                  style="border:0;" 
+                  allowfullscreen="" 
+                  loading="lazy" 
+                  referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+              <div class="p-6">
+                <a
+                  href="https://www.google.com/maps?q=Calle+22D+N°.18A-65,+Montería,+Córdoba"
+                  target="_blank"
+                  class="w-full bg-blue-600 text-white py-3 !rounded-button hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center space-x-3 whitespace-nowrap"
+                >
+                  <div class="w-5 h-5 flex items-center justify-center">
+                    <i class="ri-map-pin-line text-lg"></i>
+                  </div>
+                  <span class="font-medium">Ver en Google Maps</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-8">
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+              <h3 class="text-2xl font-bold text-secondary mb-6">Contacto Rápido</h3>
+              <p class="text-gray-600 mb-8 leading-relaxed">
+                Elige la forma más conveniente de contactarnos. Estamos listos para asesorarte en el mejoramiento genético de tu ganado.
+              </p>
+              
+              <div class="space-y-4">
+                <a
+                  href="https://wa.me/573116174630?text=Hola, me interesa información sobre sus servicios de genética bovina"
+                  target="_blank"
+                  class="w-full bg-primary text-white py-4 !rounded-button hover:bg-orange-600 transition-all duration-200 flex items-center justify-center space-x-3 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                >
+                  <div class="w-6 h-6 flex items-center justify-center">
+                    <i class="ri-whatsapp-fill text-xl"></i>
+                  </div>
+                  <span class="font-semibold">Escribir por WhatsApp</span>
+                </a>
+                
+                <a
+                  href="tel:+573116174630"
+                  class="w-full bg-secondary text-white py-4 !rounded-button hover:bg-gray-800 transition-all duration-200 flex items-center justify-center space-x-3 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                >
+                  <div class="w-6 h-6 flex items-center justify-center">
+                    <i class="ri-phone-fill text-xl"></i>
+                  </div>
+                  <span class="font-semibold">Llamar Ahora</span>
+                </a>
+                
+                <a
+                  href="mailto:jgmv2004@gmail.com?subject=Consulta sobre Genética Bovina&body=Hola, me interesa obtener información sobre sus servicios de genética bovina."
+                  class="w-full bg-gray-600 text-white py-4 !rounded-button hover:bg-gray-700 transition-all duration-200 flex items-center justify-center space-x-3 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                >
+                  <div class="w-6 h-6 flex items-center justify-center">
+                    <i class="ri-mail-fill text-xl"></i>
+                  </div>
+                  <span class="font-semibold">Enviar Email</span>
+                </a>
+              </div>
+            </div>
+            
+            <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8">
+              <div class="flex items-start space-x-4">
+                <div class="w-12 h-12 bg-green-500/20 rounded-2xl flex items-center justify-center flex-shrink-0">
+                  <div class="w-6 h-6 flex items-center justify-center">
+                    <i class="ri-time-line text-green-600 text-xl"></i>
+                  </div>
+                </div>
+                <div>
+                  <h4 class="text-lg font-bold text-secondary mb-2">Horarios de Atención</h4>
+                  <div class="space-y-1 text-gray-700">
+                    <p><span class="font-medium">Lunes a Viernes:</span> 7:00 AM - 6:00 PM</p>
+                    <p><span class="font-medium">Sábados:</span> 7:00 AM - 2:00 PM</p>
+                    <p><span class="font-medium">Domingos:</span> Solo emergencias</p>
+                  </div>
+                  <div class="mt-4 p-3 bg-green-200/50 rounded-lg">
+                    <p class="text-sm text-green-800 font-medium">
+                      <i class="ri-whatsapp-fill mr-1"></i>
+                      WhatsApp disponible 24/7 para emergencias
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-3 gap-8">
+          <div>
+            <img
+              src="https://i.ibb.co/FLKMjk8K/logo-gbsinfondo.png"
+              alt="Genética Bovina"
+              class="h-16 w-auto object-contain mb-5"
+            />
+            <p class="text-gray-300 leading-relaxed">
+              Especialistas en genética bovina para el mejoramiento de
+              su ganado lechero en el trópico colombiano.
+            </p>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Nuestras Razas</h4>
+            <ul class="space-y-2 text-gray-300">
+              <li>
+                <a
+                  href="#razas"
+                  class="hover:text-primary transition-colors duration-200"
+                  >Girolando</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#razas"
+                  class="hover:text-primary transition-colors duration-200"
+                  >Gyr Lechero</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#razas"
+                  class="hover:text-primary transition-colors duration-200"
+                  >Guzerá Lechero</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#razas"
+                  class="hover:text-primary transition-colors duration-200"
+                  >Sindi Lechero</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Contacto Directo</h4>
+            <div class="space-y-3 text-gray-300">
+              <div class="flex items-center space-x-3">
+                <div class="w-5 h-5 flex items-center justify-center">
+                  <i class="ri-whatsapp-fill text-primary"></i>
+                </div>
+                <a
+                  href="https://wa.me/573116174630"
+                  target="_blank"
+                  class="hover:text-primary transition-colors duration-200"
+                  >+57 311 617 4630</a
+                >
+              </div>
+              <div class="flex items-center space-x-3">
+                <div class="w-5 h-5 flex items-center justify-center">
+                  <i class="ri-mail-line text-primary"></i>
+                </div>
+                <a
+                  href="mailto:jgmv2004@gmail.com"
+                  class="hover:text-primary transition-colors duration-200"
+                  >jgmv2004@gmail.com</a
+                >
+              </div>
+              <div class="flex items-start space-x-3">
+                <div class="w-5 h-5 flex items-center justify-center mt-0.5">
+                  <i class="ri-map-pin-line text-primary"></i>
+                </div>
+                <div>
+                  <span>Calle 22D N°.18A-65, Montería, Córdoba</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400"
+        >
+          <p>&copy; 2025 Genética Bovina. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+    <script id="smooth-scroll">
+      document.addEventListener("DOMContentLoaded", function () {
+        const links = document.querySelectorAll('a[href^="#"]');
+        links.forEach((link) => {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href");
+            const targetSection = document.querySelector(targetId);
+            if (targetSection) {
+              targetSection.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            }
+          });
+        });
+      });
+    </script>
+    <script>
+  // Script para alternar el menú móvil
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
+  </body>
+</html>
